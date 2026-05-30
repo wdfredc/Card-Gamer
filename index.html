@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Card Gamer</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <div class="card-topo">
+
+                <div class="avatar">🎮</div>
+
+                <div class="info-jogador">
+                    <h1 class="nome">ShadowByte</h1>
+                    <span class="rank" id="rank">◆ Rank Diamante</span>
+                </div>
+
+            </div>
+
+            <div class="card-stats">
+
+                <div class="stat">
+                    <span class="stat-label">Nível</span>
+                    <span class="stat-valor" id="nivel">70</span>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-label">Vitórias</span>
+                    <span class="stat-valor">312</span>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-label">K/D Ratio</span>
+                    <span class="stat-valor">3.8</span>
+                </div>
+
+            </div>
+
+            <div class="barra-xp">
+
+                <span class="xp-label" id="xp-label">
+                    XP: 10.000 / 10.000
+                </span>
+
+                <div class="barra-fundo">
+                    <div class="barra-progresso"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="botoes-tema">
+
+            <button onclick="temaRoxo()">
+                🟣 Roxo Neon
+            </button>
+
+            <button onclick="temaVerde()">
+                🟢 Cyberpunk
+            </button>
+
+            <button onclick="temaVermelho()">
+                🔴 Inferno
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function temaRoxo() {
+            document.documentElement.style.setProperty('--cor-fundo-card', '#0f0c29');
+            document.documentElement.style.setProperty('--cor-destaque', '#a855f7');
+            document.documentElement.style.setProperty('--cor-destaque-2', '#ec4899');
+            document.documentElement.style.setProperty('--xp-progresso', '100%');
+
+            document.getElementById('rank').innerText = '◆ Rank Diamante';
+            document.getElementById('nivel').innerText = '70';
+            document.getElementById('xp-label').innerText = 'XP: 10.000 / 10.000';
+        }
+
+        function temaVerde() {
+            document.documentElement.style.setProperty('--cor-fundo-card', '#001a12');
+            document.documentElement.style.setProperty('--cor-destaque', '#00ff88');
+            document.documentElement.style.setProperty('--cor-destaque-2', '#00ccff');
+            document.documentElement.style.setProperty('--xp-progresso', '100%');
+
+            document.getElementById('rank').innerText = '◆ Rank Esmeralda';
+            document.getElementById('nivel').innerText = '70';
+            document.getElementById('xp-label').innerText = 'XP: 20.000 / 20.000';
+        }
+
+        function temaVermelho() {
+            document.documentElement.style.setProperty('--cor-fundo-card', '#1a0000');
+            document.documentElement.style.setProperty('--cor-destaque', '#ff2d2d');
+            document.documentElement.style.setProperty('--cor-destaque-2', '#ff8800');
+            document.documentElement.style.setProperty('--xp-progresso', '25%');
+
+            document.getElementById('rank').innerText = '◆ Rank Rubi';
+            document.getElementById('nivel').innerText = '70';
+            document.getElementById('xp-label').innerText = 'XP: 7.500 / 30.000';
+        }
+
+        temaRoxo();
+
+    </script>
+
+</body>
+
+</html>
